@@ -1,26 +1,30 @@
-#include"main.h"
+#include "main.h"
 
 /**
- * print_diagonal - print a diagonal line
+ * print_diagonal - draws a straight line in the terminal
+ * @n: number of time to draw \
  *
- * @n: is the number of times the \ character
- *     should be printed
-*/
-
+ * Return: void;
+ */
 void print_diagonal(int n)
 {
-	int postn, space;
+	int i;
+	int j;
 
-	if (n <= 0)
-		_putchar('\n');
-	else
+	if (n > 0)
 	{
-		for (postn = 1; postn <= n; ++postn)
+		for (i = 0; i < n; i++)
 		{
-			for (space = 1; space <= postn; ++space)
-				_putchar(' ');
-			_putchar(92); /*is equal to '/' char*/
+			for (j = 0; j < i; j++)
+			{
+				_putchar(32);
+			}
+			_putchar(92);
 			_putchar('\n');
 		}
 	}
-}
+	else
+	{
+		_putchar('\n');
+	}
+
