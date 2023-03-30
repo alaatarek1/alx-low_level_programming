@@ -1,30 +1,27 @@
 #include "main.h"
-
 /**
- * print_diagonal - draws a straight line in the terminal
- * @n: number of time to draw \
- *
- * Return: void;
+ * print_diagonal - print diagonal line
+ * @n: number of time back slash is printed
  */
 void print_diagonal(int n)
 {
-	int i;
-	int j;
-
-	if (n > 0)
+	if (n > 1)
 	{
+		int i;
+
+		int j;
+
 		for (i = 0; i < n; i++)
 		{
-			for (j = 0; j < i; j++)
+			for (j = 0; j < n; j++)
 			{
-				_putchar(32);
+				if (i == j)
+					_putchar(92);
+				if (j < i)
+					_putchar(' ');
 			}
-			_putchar(92);
 			_putchar('\n');
 		}
-	}
-	else
-	{
+	} else
 		_putchar('\n');
-	}
-
+}
