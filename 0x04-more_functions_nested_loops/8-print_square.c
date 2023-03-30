@@ -1,21 +1,24 @@
-#include"main.h"
-
+#include "main.h"
 /**
- * print_square - print a square using the character #
- *
- * @size: is the size of the square
- *
- * Return: Always 0 (Success)
-*/
-
-void print_square(int size)
+ * print_square - print diagonal line
+ * @n: number of time back slash is printed
+ */
+void print_square(int n)
 {
-	int row, column;
-
-	for (row = 1; row <= size; ++row)
+	if (n > 1)
 	{
-		for (column = 1; column <= size; ++column)
-			_putchar('#');
+		int i;
+
+		int j;
+
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
+	} else
 		_putchar('\n');
-	}
 }
